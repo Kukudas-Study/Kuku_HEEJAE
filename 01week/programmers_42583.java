@@ -4,6 +4,7 @@ class Solution {
         int answer = 0;
         
         Queue<Integer> bridge=new LinkedList<>();
+        // time : 경과 시간, sum : 다리에 올라간 총 트럭의 무게
         int time=0, sum=0;
         
         for(int i=0;i<truck_weights.length;i++)
