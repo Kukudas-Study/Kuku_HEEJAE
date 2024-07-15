@@ -39,7 +39,7 @@ def bfs(start_node):
         for i in range(1, node+1):
             if visit2[i]==0 and graph[start_node][i]==1:
                 queue.append(i)
-		            # 방문
+		# 방문
                 visit2[i]=1
 
 dfs(start_node)
