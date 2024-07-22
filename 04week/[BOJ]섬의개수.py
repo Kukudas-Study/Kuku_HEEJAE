@@ -37,4 +37,5 @@ while True:
             if graph[i][j] == 1:
                 cnt += 1
                 bfs(i,j)
+                
     print(cnt)
