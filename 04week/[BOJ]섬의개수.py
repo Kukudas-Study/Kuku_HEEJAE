@@ -15,7 +15,7 @@ def bfs(x,y):
         for i in range(8):
             ny = y+dy[i]
             nx = x+dx[i]
-            # 조건에 만족하는 방문하지 않는 육지에 방문 처리(0)하고 연결된 유직 탐색
+            # 조건에 만족하는 방문하지 않는 육지에 방문 처리(0)하고 연결된 육지 탐색
             if 0<=ny<w and 0<=nx<h and graph[nx][ny]==1:
                 graph[nx][ny]=0
                 queue.append((nx,ny))
