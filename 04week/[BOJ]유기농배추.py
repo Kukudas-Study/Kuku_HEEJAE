@@ -2,23 +2,18 @@ import sys
 sys.setrecursionlimit(10000)
 
 def dfs(x, y):
-    # 범위를 넘어가면 종료
-    if x < 0 or x >= n or y < 0 or y >= m:
-        return
-    # 배추가 없을 때 종료
-    if graph[x][y] == 0:
-        return
-    # 방문 배추를 0으로 표시 -> 또 방문하지 않도록 방지
-    graph[x][y] = 0
-   
-    # 동
-    dfs(x+1, y)
-    # 서
-    dfs(x-1, y)
-    # 남
-    dfs(x, y+1)
-    # 북
-    dfs(x, y-1)
+  
+    # 범위를 만족하고, 배추가 있을 경우
+    if 0<=x<n and 0<=y<m:
+        if graph[x][y]==1:
+            # 방문 배추를 0으로 표시 -> 또 방문하지 않도록 방지
+            graph[x][y] = 0
+    
+            # 동서남북
+            dfs(x+1, y)
+            dfs(x-1, y)
+            dfs(x, y+1)
+            dfs(x, y-1)
 
 # 테스트케이스 입력받음
 T = int(input())
