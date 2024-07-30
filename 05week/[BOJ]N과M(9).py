@@ -12,15 +12,15 @@ def back():
         print(' '.join(map(str,arr)))
         return
     # 중복되는 것을 방지하기 위해 현 숫자 넣기 위한 변수
-    n=0
+    num=0
     # nlist를 순회하며
     # 이전 숫자와 현 숫자가 일치하지 않고, 방문하지 않은 경우
     for i in range(n):
-        if n != nlist[i] and not visited[i]:
+        if num != nlist[i] and not visited[i]:
             # 방문 처리하고 리스트에 추가하고, n에 현 숫자로 업데이트
             visited[i]=1
             arr.append(nlist[i])
-            n=nlist[i]
+            num=nlist[i]
             # back()호출, 방문상태 초기화, 리스트 비우기
             back()
             visited[i]=0
